@@ -29,7 +29,7 @@ Is uses "external networking" scheme with bridged network. Configure bridge on y
 sudo ip add name br0 type bridge
 sudo ip set eth0 master br0
 ```
-Do not forget to disable dhcp on `eth0` intarface and release existing adress. You can use `iproute2` or `netctl` to create bridge and manage network connections. Read mare at [Arch Wiki](https://wiki.archlinux.org/index.php/Network_bridge).
+Do not forget to disable dhcp on `eth0` intarface and release existing address. You can use `iproute2` or `netctl` to create bridge and manage network connections. Read mare at [Arch Wiki](https://wiki.archlinux.org/index.php/Network_bridge).
 
 This project use QEMU [HelperNetworking](https://wiki.qemu.org/Features/HelperNetworking). It creates a tap file descriptor, attaches it to a bridge, and passes it back to QEMU. This helper runs with higher privileges and allows QEMU to be invoked as a non-privileged user.
 
