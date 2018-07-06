@@ -42,7 +42,7 @@ At /etc/qemu/bridge.conf
 allow br0
 ```
 
-Accept forward traffict at bridge by adding iptables rule:
+Accept forward traffic at bridge by adding iptables rule:
 ```sh
 sudo iptables -I FORWARD -m physdev --physdev-is-bridged -j ACCEPT
 ```
