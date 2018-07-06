@@ -1,0 +1,12 @@
+#!/bin/sh
+set -x
+
+if [ -n "$1" ];then
+        ip link set $1 down
+        ip link set $1 nomaster
+        ip link delete $1
+        exit 0
+else
+        echo "Error: no interface specified"
+        exit 1
+fi
